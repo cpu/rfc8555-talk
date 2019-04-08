@@ -1,0 +1,30 @@
+Title: Automatic Certificate Management At Internet Scale
+
+
+Abstract:
+
+Let's Encrypt is a free, automated, and open certificate authority (CA) run for
+the public's benefit. Since its launch in 2016 Let's Encrypt has issued
+certificates for over 157 million fully qualified domain names and helped drive
+global HTTPS adoption.
+
+As part of realizing automatic certificate management able to scale to the
+Internet at large Let's Encrypt helped develop a new protocol called "ACME"
+- the Automatic Certificate Management Environment. This protocol is now
+published by the IETF as a standards track document, RFC 8555.
+
+In this talk I will provide a guided tour of RFC 8555 and discuss the evolution
+of the protocol from its earlier drafts to the current standard. There is
+already a thriving ecosystem of ACME clients and more CAs are implementing
+servers each year. I'll close with a brief demonstration of how you can quickly
+and easily run your own test ACME certificate authority to experiment with the
+protocol.
+
+
+Speaker Bio:
+
+Daniel McCarney (@cpu) is a backend software developer for the Internet Security
+Research Group (ISRG). He is a co-author of RFC 8555 and a primary maintainer of
+Boulder, the open source ACME certificate authority that powers Let's Encrypt.
+Daniel lives in rural Quebec and enjoys contributing to free software, writing
+retro computer viruses and taking pictures of mushrooms.

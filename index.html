@@ -1,49 +1,132 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>ACME - Daniel McCarney</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/solarized.css">
+    <style>
+    /*
+     * @cpu is terrible at CSS.
+     * Here are his 1-off inline hacks.
+     */
+    body {
+      background:url("img/geobackground.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    section {
+      background-color: rgba(253, 246, 227, 0.88);
+    }
+    section.stack {
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+    /*
+     * Don't used a section background for iframe'd sections
+     */
+    section[data-background-iframe] {
+      background-color: rgba(0, 0, 0, 0.0);
+    }
+    .logo-footer {
+      display: block;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      margin-left: -5.5%;
+      z-index: 20;
+    }
+    .logo-footer img {
+      width: 20%;
+      height: auto;
+    }
+    .reveal blockquote {
+      color: #839496;
+      background: white;
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    }
+    .reveal section img {
+      border: none;
+    }
+    </style>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
 
-		<script src="js/reveal.js"></script>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown="content/intro.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-charset="utf-8">
+        </section>
+        <!--
+          NOTE(@cpu): I can't figure out a great way to include this slide from
+          markdown so it's jammed in here inline.
+        -->
+        <section data-background-iframe="https://letsencrypt.org/stats" data-background-interactive>
+          <div style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;">
+            <p>Has it worked? Our stats say "Yes"! </p>
+          </div>
+          <aside class="notes">
+            <p>Since launch our growth has been tremendous.</p>
+            <p>We've issued certificates for over 160 million fully qualified domain names since launch.</p>
+            <p>We've also seen a global increase in HTTPS traffic. At the time Let's Encrypt launched Firefox's telemetry was reporting ~39.5% of all page loads were over HTTPs. Today that number is 78% and rising.</p>
+            <p>When I joined Let's Encrypt Boulder was issuing about 24,000 certificates a day. Today Boulder issues over 1,000,000 certificates per day (with a peak of 1.6 million).</p>
+            <p>Aproximately 92% of Let's Encrypt certificates are issued to domains that didn't have certificates before</p>
+            <p>We've made a lot of progress but there is still a lot of work to do. Our mission to get the web to 100% encryption is not accomplished yet.</p>
+          </aside>
+        </section>
+        <section data-markdown="content/dv.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-charset="utf-8">
+        </section>
+        <section data-markdown="content/acme.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-charset="utf-8">
+        </section>
+        <section data-markdown="content/end.md"
+                 data-separator="^\n\n\n"
+                 data-separator-vertical="^\n\n"
+                 data-charset="utf-8">
+        </section>
+      </div>
+    </div>
+    <div class="logo-footer">
+      <img src="img/le-logo-wide.png"/>
+    </div>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true }
+        ]
+      });
+    </script>
+  </body>
 </html>
