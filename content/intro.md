@@ -5,6 +5,8 @@
 
 [Polytechnique Montréal](https://www.polymtl.ca/en/) - Seminar Series Talk.
 
+<a href="https://rfc8555-talk.binaryparadox.net" style="font-size:0.7em; color:lightseagreen">https://rfc8555-talk.binarypardox.net</a>
+
 notes:
 
 Let's get right into it.

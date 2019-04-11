@@ -1,3 +1,18 @@
+<img src="img/stats.growth.jpg"/>
+
+notes: In case the stats website embed didn't work (or stops working) I included
+some screenshots from 2019-04-11.
+
+
+
+<img src="img/stats.https.jpg"/>
+
+
+
+<img src="img/stats.issued.jpg"/>
+
+
+
 <!-- .slide: data-background="img/acme.mail.order.jpg" -->
 ## Ecosystem
 

@@ -12,9 +12,9 @@
 
 ## Conclusion
 
+* Slides: [https://rfc8555-talk.binaryparadox.net](https://rfc8555-talk.binaryparadox.net)
 * Contact
   * Email: [cpu@letsencrypt.org](mailto://cpu@letsencrypt.org)
-  * Github: [@cpu](https://github.com/cpu)
   * [Let's Encrypt Community Forum](https://community.letsencrypt.org)
 * Software
   * [Pebble](https://github.com/letsencrypt/pebble)
