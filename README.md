@@ -3,6 +3,9 @@
 Presented at [Polytechnique Montréal](https://www.polymtl.ca/en/) April 11th,
 2019 as an invited talk for the Computer Science department seminar series.
 
+You can view the hosted slides here:
+https://rfc8555-talk.binaryparadox.net
+
 ## Talk Abstract:
 
 Let's Encrypt is a free, automated, and open certificate authority (CA) run for
